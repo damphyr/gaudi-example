@@ -10,7 +10,7 @@ To download and start the workshop _devenv_ do
 
 ```sh
 docker pull -q varzuehlke/gaudi-devenv:latest
-docker run --privileged -it --env HOST_UID=$(id -u) --env HOST_GID=$(id -g) varzuehlke/gaudi-devenv:latest
+docker run --privileged -it -v `pwd`:/workspace --env HOST_UID=$(id -u) --env HOST_GID=$(id -g) varzuehlke/gaudi-devenv:latest
 ```
 
 ## Windows
@@ -21,4 +21,4 @@ docker run --privileged -it --env HOST_UID=1000 --env HOST_GID=1000 varzuehlke/g
 ```
 
 ----
-[Context](Context.md) | [Scaffold](01.md)
+[Context](Context.md) | [Start](Start.md)

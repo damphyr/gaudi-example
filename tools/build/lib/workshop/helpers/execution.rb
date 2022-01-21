@@ -1,6 +1,7 @@
 require "patir/command"
 
 module Execution
+  include Gaudi::Utilities
   # Number of lines from the tail of the command output to attach to the exception message on failure
   EXCEPTION_LINES = 25
   # Runs the command line using Patir, creating a new process and suppressing the output of the command.

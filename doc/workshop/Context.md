@@ -34,4 +34,4 @@ The [list of goals](https://github.com/damphyr/gaudi/blob/main/doc/ASPIRATIONS.m
 (also known as [Ariadne's thread](https://en.wikipedia.org/wiki/Ariadne%27s_thread_(logic)))
 
 ----
-| [Example](Example.md)
+| [Approach](Approach.md)

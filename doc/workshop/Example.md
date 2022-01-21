@@ -1,24 +1,32 @@
 # An example of Gaudi usage
 
+## Unmentionables
+
+Gaudi makes heavy use of [Rake](https://github.com/ruby/rake) and its DSL.
+
+Some knowledge of the Ruby language _will_ be required and language concepts will not be expanded upon due to time restrictions.
+
+## Common base
+
 To be able to work towards achieving the Gaudi goals, we first need to establish a consistent working environment.
 
 To that end we will use a docker container image as our development environment.
 
 To download and start the workshop _devenv_ do
 
-## macOS
+### macOS
 
 ```sh
 docker pull -q varzuehlke/gaudi-devenv:latest
 docker run --privileged -it -v `pwd`:/workspace --env HOST_UID=$(id -u) --env HOST_GID=$(id -g) varzuehlke/gaudi-devenv:latest
 ```
 
-## Windows
+### Windows
 
 ```sh
 docker pull -q varzuehlke/gaudi-devenv:latest
-docker run --privileged -it --env HOST_UID=1000 --env HOST_GID=1000 varzuehlke/gaudi-devenv:latest
+docker run --privileged -it -v "%CD%":/workspace --env HOST_UID=1000 --env HOST_GID=1000 varzuehlke/gaudi-devenv:latest
 ```
 
 ----
-[Context](Context.md) | [Start](Start.md)
+[Approach](Approach.md) | [Start](Start.md)

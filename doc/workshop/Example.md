@@ -1,10 +1,10 @@
 # An example of Gaudi usage
 
-## Unmentionables
+## Assumptions
 
 Gaudi makes heavy use of [Rake](https://github.com/ruby/rake) and its DSL.
 
-Some knowledge of the Ruby language _will_ be required and language concepts will not be expanded upon due to time restrictions.
+Some knowledge of the Ruby language and its ecosystem _is_ required and language concepts will not be expanded upon due to time restrictions.
 
 ## Common base
 
@@ -12,7 +12,7 @@ To be able to work towards achieving the Gaudi goals, we first need to establish
 
 To that end we will use a docker container image as our development environment.
 
-To download and start the workshop _devenv_ do
+To download and start the workshop _devenv_ pick an empty directory and do
 
 ### macOS
 

@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+# Create a group "developer" with the uidgid of the current directory
+# WORKSPACE=/workspace
+
+username=developer
+
+# Creation of the new group may fail if there is an existing group with the same GID, so ignore the result
+groupadd -g ${HOST_GID} $username &>/dev/null || true
+useradd --uid ${HOST_UID} --gid ${HOST_GID} --shell /bin/bash --create-home $username &>/dev/null || true
+usermod -aG docker $username
+chown ${HOST_UID}:${HOST_GID} /home/$username /home/$username/.[a-z]*
+chown ${HOST_UID}:${HOST_GID} /workspace
+
+adduser $username sudo &>/dev/null || true
+sed -i 's/ALL$/NOPASSWD: ALL/' /etc/sudoers
+
+dockerd &
+
+umask 0002
+
+exec su - $username

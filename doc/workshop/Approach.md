@@ -11,4 +11,4 @@ Gaudi offers four core "features"
 * A command line calling convention and way of interfacing with the OS environment
   * Because some things are not meant to be version controlled
 
-[Approach](Approach.md) | [Example](Example.md)
+[Context](Context.md) | [Example](Example.md)
